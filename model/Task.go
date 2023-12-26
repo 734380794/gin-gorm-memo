@@ -9,6 +9,7 @@ type Task struct {
 	Title     string `gorm:"index;not null"`
 	Status    int    `gorm:"default:'0'"`
 	Content   string `gorm:"text"`
+	CreateAt  int64
 	StartTime int64
 	EndTime   int64
 }

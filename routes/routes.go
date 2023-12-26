@@ -25,7 +25,8 @@ func NewRouter() *gin.Engine {
 		{
 			// 创建任务
 			v1.POST("task/create", api.CreateTask)
-
+			// 查询任务
+			v1.GET("task/show/:id", api.ShowTask)
 		}
 	}
 	return r
