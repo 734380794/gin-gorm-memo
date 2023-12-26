@@ -1,10 +1,10 @@
 package api
 
 import (
+	"gin-gorm-memo/pkg/utils"
+	"gin-gorm-memo/service"
 	"github.com/gin-gonic/gin"
 	logging "github.com/sirupsen/logrus"
-	"memo-api/pkg/utils"
-	"memo-api/service"
 )
 
 // CreateTask 创建任务

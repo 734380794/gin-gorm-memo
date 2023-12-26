@@ -38,11 +38,9 @@ go run main.go
 - Gin
 - Gorm
 - mysql
-- redis
 - ini
 - jwt-go
 - logrus
-- go-swagger
 
 ## 项目结构
 
@@ -75,7 +73,6 @@ go run main.go
 ## 配置文件
 配置文件在conf/config.ini
 
-**conf/config.ini**
 ```ini
 # debug开发模式,release生产模式
 [service]

@@ -1,8 +1,8 @@
 package service
 
 import (
-	"memo-api/model"
-	"memo-api/serializer"
+	"gin-gorm-memo/model"
+	"gin-gorm-memo/serializer"
 	"time"
 )
 

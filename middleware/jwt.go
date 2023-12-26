@@ -2,8 +2,8 @@ package middleware
 
 import (
 	"fmt"
+	"gin-gorm-memo/pkg/utils"
 	"github.com/gin-gonic/gin"
-	"memo-api/pkg/utils"
 	"time"
 )
 

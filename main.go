@@ -1,8 +1,8 @@
 package main
 
 import (
-	"memo-api/conf"
-	"memo-api/routes"
+	"gin-gorm-memo/conf"
+	"gin-gorm-memo/routes"
 )
 
 func main() {

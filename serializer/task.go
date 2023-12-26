@@ -1,6 +1,6 @@
 package serializer
 
-import "memo-api/model"
+import "gin-gorm-memo/model"
 
 type Task struct {
 	ID        uint   `json:"id"` // 任务ID

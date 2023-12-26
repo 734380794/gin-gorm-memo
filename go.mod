@@ -1,4 +1,4 @@
-module memo-api
+module gin-gorm-memo
 
 go 1.21.5
 

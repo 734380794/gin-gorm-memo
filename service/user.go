@@ -1,10 +1,10 @@
 package service
 
 import (
+	"gin-gorm-memo/model"
+	"gin-gorm-memo/pkg/utils"
+	"gin-gorm-memo/serializer"
 	"github.com/jinzhu/gorm"
-	"memo-api/model"
-	"memo-api/pkg/utils"
-	"memo-api/serializer"
 )
 
 type UserService struct {

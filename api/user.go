@@ -1,8 +1,8 @@
 package api
 
 import (
+	"gin-gorm-memo/service"
 	"github.com/gin-gonic/gin"
-	"memo-api/service"
 )
 
 // UserRegister 用户注册

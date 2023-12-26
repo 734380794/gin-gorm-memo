@@ -1,11 +1,11 @@
 package routes
 
 import (
+	"gin-gorm-memo/api"
+	"gin-gorm-memo/middleware"
 	"github.com/gin-contrib/sessions"
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
-	"memo-api/api"
-	"memo-api/middleware"
 )
 
 func NewRouter() *gin.Engine {

@@ -2,9 +2,9 @@ package conf
 
 import (
 	"fmt"
+	"gin-gorm-memo/model"
 	"gopkg.in/ini.v1"
 	"log"
-	"memo-api/model"
 	"strings"
 )
 

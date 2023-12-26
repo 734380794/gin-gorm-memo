@@ -1,6 +1,6 @@
 package serializer
 
-import "memo-api/model"
+import "gin-gorm-memo/model"
 
 type User struct {
 	ID       uint   `json:"id" form:"id" example:"1"`                   // 用户ID
