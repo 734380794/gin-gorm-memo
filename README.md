@@ -33,7 +33,7 @@ go run main.go
 
 ## 项目主要依赖：
 
-**Golang V1.15**
+**Golang V1.21**
 
 - Gin
 - Gorm
