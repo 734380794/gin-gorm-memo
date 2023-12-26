@@ -5,6 +5,7 @@ import (
 	"github.com/gin-contrib/sessions/cookie"
 	"github.com/gin-gonic/gin"
 	"memo-api/api"
+	"memo-api/middleware"
 )
 
 func NewRouter() *gin.Engine {
@@ -18,7 +19,14 @@ func NewRouter() *gin.Engine {
 		v1.POST("user/register", api.UserRegister)
 		// 用户登录
 		v1.POST("user/login", api.UserLogin)
+		authed := v1.Group("/")
+		// token 验证中间件
+		authed.Use(middleware.JWT())
+		{
+			// 创建任务
+			v1.POST("task/create", api.CreateTask)
 
+		}
 	}
 	return r
 }
