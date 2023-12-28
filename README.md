@@ -47,7 +47,7 @@ go run main.go
 ```shell
 
 ├── api
-├── conf
+├── config
 ├── docs
 ├── middleware
 ├── pkg
