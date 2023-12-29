@@ -16,6 +16,12 @@ var (
 	DbPassWord string
 	DbName     string
 	Charset    string
+
+	EtcdHost string
+	EtcdPort string
+
+	UserServiceAddress string
+	TaskServiceAddress string
 )
 
 func Init() {
@@ -24,6 +30,8 @@ func Init() {
 		fmt.Println("config.ini配置文件错误，请仔细检查文件", err)
 	}
 	LoadMysqlData(file)
+	LoadEtcd(file)
+	LoadServer(file)
 }
 
 func LoadMysqlData(file *ini.File) {
@@ -34,4 +42,14 @@ func LoadMysqlData(file *ini.File) {
 	DbPassWord = file.Section("mysql").Key("DbPassWord").String()
 	DbName = file.Section("mysql").Key("DbName").String()
 	Charset = file.Section("mysql").Key("Charset").String()
+}
+
+func LoadEtcd(file *ini.File) {
+	EtcdHost = file.Section("etcd").Key("EtcdHost").String()
+	EtcdPort = file.Section("etcd").Key("EtcdPort").String()
+}
+
+func LoadServer(file *ini.File) {
+	UserServiceAddress = file.Section("server").Key("UserServiceAddress").String()
+	TaskServiceAddress = file.Section("server").Key("TaskServiceAddress").String()
 }

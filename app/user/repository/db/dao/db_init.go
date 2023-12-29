@@ -1,6 +1,7 @@
 package dao
 
 import (
+	"context"
 	"fmt"
 	"gin-gorm-memo/v2/config"
 	"gorm.io/driver/mysql"
@@ -49,4 +50,9 @@ func Database(conn string) error {
 	migration()
 
 	return err
+}
+
+func NewDBClient(ctx context.Context) *gorm.DB {
+	db := _db
+	return db.WithContext(ctx)
 }
