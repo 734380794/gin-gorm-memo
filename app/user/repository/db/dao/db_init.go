@@ -20,7 +20,7 @@ func InitDB() {
 	password := config.DbPassWord
 	database := config.DbName
 	charset := config.Charset
-	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=%s", user, password, host, post, database, charset)
+	dsn := fmt.Sprintf("%s:%s@tcp(%s:%s)/%s?charset=%s&parseTime=true", user, password, host, post, database, charset)
 	fmt.Println("tcp连接", dsn)
 	err := Database(dsn)
 	if err != nil {

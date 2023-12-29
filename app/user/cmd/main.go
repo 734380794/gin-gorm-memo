@@ -26,8 +26,6 @@ func main() {
 	)
 	// 结构命令行参数，初始化
 	microService.Init()
-	srv := service.GetUserSrv()
-	fmt.Println("srv", srv)
 	// 服务注册
 	_ = pb.RegisterUserServiceHandler(microService.Server(), service.GetUserSrv())
 	// 启动微服务

@@ -35,6 +35,7 @@ func GetUserSrvHuqury() *UserSrv {
 
 func (u *UserSrv) UserLogin(ctx context.Context, req *pb.UserRequest, resp *pb.UserResponse) (err error) {
 	resp.Code = e.Success
+
 	user, err := dao.NewUserDao(ctx).FindUserByUserName(req.UserName)
 	if err != nil {
 		resp.Code = e.Error
