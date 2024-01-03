@@ -12,6 +12,25 @@ type Response struct {
 	Error  string      `json:"error"`
 }
 
+func RespSuccess(ctx *gin.Context, data interface{}, code ...int) *Response {
+	status := e.Success
+	if code != nil {
+		status = code[0]
+	}
+
+	if data == nil {
+		data = "操作成功"
+	}
+
+	r := &Response{
+		Status: status,
+		Data:   data,
+		Msg:    e.GetMsg(status),
+	}
+
+	return r
+}
+
 func RespError(ctx *gin.Context, err error, data interface{}, code ...int) *Response {
 	status := e.Success
 	if code != nil {
